@@ -1,0 +1,27 @@
+{
+	"name": "root",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"pnpm": {
+		"node-linker": "hoisted"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"ct": "pnpm --filter client-template",
+		"ui": "pnpm --filter ui",
+		"st": "pnpm --filter ./servers/template",
+		"check": "pnpm biome check . --apply"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4"
+	},
+	"dependencies": {
+		"@types/react": "19.0.7",
+		"react": "19.0.0"
+	}
+}
