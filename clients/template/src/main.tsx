@@ -19,10 +19,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-
-
-
-
 createRoot(rootElement).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>

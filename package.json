@@ -1,34 +1,33 @@
 {
-	"name": "root",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"type": "module",
-	"pnpm": {
-		"node-linker": "hoisted"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"ct": "pnpm --filter client-template",
-		"ui": "pnpm --filter ui",
-		"st": "pnpm --filter ./servers/template",
-		"check": "pnpm biome check . --write"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4"
-	},
-	"dependencies": {
-		"@types/react": "19.0.7",
-		"husky": "^9.1.7",
-		"lint-staged": "^15.5.1",
-		"react": "19.0.0"
-	},
-	"lint-staged": {
-		"*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
-			"npx biome check --write ."
-		]
-	}
+  "name": "root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "pnpm": {
+    "node-linker": "hoisted"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ct": "pnpm --filter client-template",
+    "ui": "pnpm --filter ui",
+    "st": "pnpm --filter ./servers/template",
+    "check": "pnpm biome check . --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  },
+  "dependencies": {
+    "@types/react": "19.0.7",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "react": "19.0.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": ["npx biome check --write ."]
+  }
 }
