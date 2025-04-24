@@ -10,8 +10,16 @@ if (!rootElement) {
   throw new Error("Failed to find the root element");
 }
 
+/**
+ * react-query client for the app. Used to interact with the cache
+ * @see https://tanstack.com/query/latest/docs/reference/QueryClient
+ */
 const queryClient = new QueryClient();
 
+/**
+ * react-router router for all the app
+ * @see https://reactrouter.com/start/data/installation
+ */
 const router = createBrowserRouter([
   {
     path: "/",

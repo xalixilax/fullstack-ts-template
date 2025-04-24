@@ -5,8 +5,12 @@ import { cors } from "hono/cors";
 import { z } from "zod";
 
 const app = new Hono();
-
 app.use("/*", cors());
+
+/**
+ * This is a sample route that uses the Hono RPC client
+ * @see https://hono.dev/docs/concepts/routers
+ */
 const route = app.post(
   "/posts",
   zValidator(
@@ -38,4 +42,9 @@ serve(
   },
 );
 
+/**
+ * Required for Hono RPC client
+ * This is used in the client to infer the types of the request and response
+ * @see https://hono.dev/docs/guides/rpc
+ */
 export type AppType = typeof route;
