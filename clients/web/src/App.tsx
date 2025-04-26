@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { type InferRequestType, type InferResponseType, hc } from "hono/client";
 import { useState } from "react";
 import { Button } from "ui/src/components/ui/button";
-import type { AppType } from "../../../servers/template/src";
+import type { AppType } from "../../../servers/api/src";
 
 /**
  * Hono RPC initialisation for the client

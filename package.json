@@ -9,10 +9,9 @@
   },
   "scripts": {
     "prepare": "husky",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "ct": "pnpm --filter client-template",
+    "web": "pnpm --filter web",
     "ui": "pnpm --filter ui",
-    "st": "pnpm --filter ./servers/template",
+    "api": "pnpm --filter api",
     "check": "pnpm biome check . --write"
   },
   "keywords": [],
